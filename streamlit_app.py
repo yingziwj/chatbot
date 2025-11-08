@@ -2,11 +2,11 @@ import streamlit as st
 from openai import OpenAI
 
 # Show title and description.
-st.title("💬 Chatbot")
+st.title("💬 聊天机器人")
 st.write(
-    "This is a simple chatbot that uses OpenAI's GPT-3.5 model to generate responses. "
-    "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
-    "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
+    "这是一个简单的聊天机器人，它使用OpenAI的GPT-3.5模型生成响应。"
+    "要使用该程序, 你需要提供一个OpenAI的API key, 要获得此key，你可以链此url[here](https://platform.openai.com/account/api-keys). "
+    "你也可以通过此链接一步步学习如何去构建这个程序[following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
@@ -14,7 +14,7 @@ st.write(
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
 openai_api_key = st.text_input("OpenAI API Key", type="password")
 if not openai_api_key:
-    st.info("Please add your OpenAI API key to continue.", icon="🗝️")
+    st.info("请输入你的OpenAI API key以继续。", icon="🗝️")
 else:
 
     # Create an OpenAI client.
